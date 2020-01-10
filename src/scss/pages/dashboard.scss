@@ -1,0 +1,151 @@
+.dashboard-wrapper {
+    .dashboard-sidebar {
+        @include boxshadow($boxshadow:0 1px 4px rgba($color-primary, 0.40));
+        padding: .6125rem 0;
+        background-color: $bg-light;
+
+        li {
+
+            a {
+                @include flexStart;
+                align-items: center;
+                padding: .6125rem .6125rem;
+                text-transform: capitalize;
+                border-bottom: 1px solid $blue-light;
+                font-size: .875rem;
+                font-weight: 500;
+
+                i {
+                    font-size: 1.2rem;
+                    color: $blue-light;
+                    margin-right: .6125rem;
+                }
+            }
+
+            &:last-child {
+                a {
+                    border-bottom: 0;
+                    padding-bottom: 0;
+                }
+            }
+            &:first-child {
+                a {
+                    padding-top: 0;
+                }
+            }
+
+            &.active,
+            &:hover {
+                a {
+                    color: $color-secondary;
+                    border-color: $color-secondary;
+                }
+            }
+        }
+    }
+    .card{
+        @include boxshadow($boxshadow:0 1px 4px rgba($color-primary, 0.40));
+        .card-header{
+            padding: .6125rem;
+            h5{
+                font-size:.875rem;
+                text-transform: uppercase;
+                color:$color-blue;
+                font-weight: 600;
+                font-family: $montserrat;
+                margin:0;
+
+            }
+            
+        }
+        .card-body{
+            padding: .6125rem;     
+        }
+        .payment-option{
+            @include flexStart;
+            align-items: center;
+            margin-top:.6125rem;
+            a{
+                display: inline-block;
+                max-width: 80px;
+                padding:.6125rem;
+                @include boxshadow(0 2px 4px rgba($color-primary,16));
+                @include radius(5px);
+                &:not(:last-child){
+                    margin-right: 1.5rem;
+                }
+            }
+        }
+        &.payment-details-card{
+            background-color: $secondary-light;
+            max-width: 500px;
+            margin:0 auto;
+            .card-header{
+                background-color: $secondary-light;
+            }
+        }
+    }
+}
+.ticket-details{
+    .yswea-counter-title{
+        font-size: .775rem;
+    }
+    ul{
+        margin-bottom: 1.5rem;
+
+        li {
+            @include flexStart;
+            font-size: .775rem;
+            padding: .15rem 0;
+            text-transform: capitalize;
+            font-family: $montserrat;
+
+            span {
+                -ms-flex: 0 0 35%;
+                flex: 0 0 35%;
+                max-width: 35%;
+            }
+
+            b {
+                font-weight: 500;
+                font-family: $montserrat;
+
+                small {
+                    font-size: .775rem;
+                    margin-right: .25rem;
+                }
+
+                &.bus-number {
+                    color: $color-secondary;
+                }
+            }
+        }
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
+}
+.modal-footer {
+    padding: .6125rem;
+    align-items: center;
+    &.ticket-footer{
+        justify-content:space-between;
+        .print-icons {
+            a {
+                &.print {
+                    i {
+                        color: $color-green;
+                        font-size: 1rem;
+                    }
+                }
+
+                &.pdf {
+                    i {
+                        color: $color-secondary;
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,291 @@
+.z-index {
+    z-index: 9999
+}
+
+.mrt30 {
+    margin-top: 30px;
+}
+
+.mrb30 {
+    margin-bottom: 30px;
+}
+
+.pd-0 {
+    padding: 0 !important;
+}
+.mr-0{
+    margin:0 !important;
+}
+
+@media screen and (min-width:$mb-sm) {
+    .highlight-card {
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+@media screen and (min-width:$mb-md) {
+    .highlight-card {
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+@media screen and (min-width:$pt-tab) {
+    .highlight-card {
+        -ms-flex: 0 0 33.333333%;
+        flex: 0 0 33.333333%;
+        max-width: 33.333333%;
+    }
+}
+@media screen and (min-width:$desktop) {
+    .highlight-card {
+        -ms-flex: 0 0 16.6667%;
+        flex: 0 0 16.6667%;
+        max-width: 16.6667%;
+    }
+}
+
+
+.p-l-0,
+.sidebar .menu .list,
+.sidebar .menu .list .ml-menu,
+.dropdown-menu ul.menu,
+.invoice .nav-tabs {
+    padding-left: 0px
+}
+.pdtb-100{
+    padding:100px 0;
+}
+.mrtb-100{
+    margin:100px 0;
+}
+.pdt-100{
+    padding-top:100px;
+}
+.pdb-100{
+    padding-top:100px;
+}
+.pd-7{
+    padding:70px 0;
+}
+.pd-5{
+    padding:50px 0;
+}
+
+.mrt-100{
+    margin-top:100px;
+}
+.mrb-100{
+    margin-bottom:100px;
+}
+
+.section-title {
+    margin-bottom: 2rem;
+
+    h4 {
+        text-transform: uppercase;
+        font-size: 1.25rem;
+        font-weight: 600;
+    }
+}
+.flex{
+    @include flex;
+}
+.flex-start{
+    @include flexStart;
+}
+.flex-end{
+    @include flexEnd;
+}
+.flex-center{
+    @include flexCenter;
+}
+.flex-between{
+    @include flexBetween
+}
+.flexvr{
+    @include flexvr;
+}
+
+.status{
+    min-width: 100px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size:.745rem;
+    font-family: $montserrat;
+    font-weight: 600;
+    padding:0.5rem 1rem;
+    display: inline-block;
+    @include radius(30px);
+    @include animate_all(all .5s);
+    &.yellow{
+        
+        background-color:rgba($color-error,0.15);
+        color:$color-error;
+       
+    }
+    &.green{
+        background-color:rgba($color-green,0.15);
+        color:$color-green;
+    }
+    &.red{
+        background-color:rgba($color-secondary,0.15);
+        color:$color-secondary;
+        &:hover{
+            background-color:$color-secondary;
+            color:$color-white;
+        }
+    }
+    &.blue{
+        background-color:rgba($color-blue,0.15);
+        color:$color-blue;
+        &:hover{
+            background-color:$color-blue;
+            color:$color-white;
+        }
+    }
+}
+.yswea-counter-title{
+    font-size: .875rem;
+    text-transform: uppercase;
+    color:$color-blue;
+    font-weight: 600;
+}
+.ysewa-title{
+    text-align: center;
+    max-width: 600px;
+    margin:0 auto;
+    margin-bottom: 3rem;
+    h3{
+        font-size: 2rem;
+        color:$color-secondary;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-bottom: .775rem;
+    }
+    p{
+        margin:0;
+        font-size:.845rem;
+        font-weight: 500;
+    }
+}
+.card {
+    @include animate_all(all .5s);
+    border: 0;
+    position: relative;
+    width: 100%;
+    box-shadow: none;
+    background: transparent;
+
+    .card-header {
+        background-color: $color-white;
+        align-items: center;
+        .card-option{
+            position: relative;
+            a{
+                position: relative;
+                i {
+                    color: $color-bg-text;
+                    font-size:1rem;
+                    line-height: 1.5;
+                }
+            }
+            
+            ul {
+                position: absolute;
+                top: 0%;
+                right: 0;
+                min-width: 80px;
+                display: none;
+                @include boxshadow($boxshadow:0 3px 10px rgba(0, 0, 0, 0.16));
+                z-index: 999;
+                background-color: $color-white;
+    
+                li {
+                    a {
+                        display: block;
+                        padding: 0.5rem 1rem;
+                        font-size: .775rem;
+                        color: $color-bg-text;
+                        align-items: center;
+                        text-transform: capitalize;
+                        border-bottom: 1px solid $color-border;
+    
+                        i {
+                            font-size: 1rem;
+                            margin-right: 0.5rem;
+                        }
+    
+                        &:hover {
+                            background-color: $color-secondary;
+                            color: $color-white;
+    
+                        }
+                    }
+                }
+            }
+        }
+        .ysewa-button{
+            &.sm-button{
+                padding:.25rem 1rem;
+                font-size: .775rem;
+                min-width: 5rem;
+            }
+        }
+    
+    }
+
+    .body {
+        font-weight: 400;
+        border-radius: .35rem;
+        background: $color-light;
+        font-size: 14px;
+        color: $color-primary;
+        padding: 20px;
+    }
+    .card-footer{
+        padding: .6125rem;
+        background-color: $color-white;
+        .icons{
+            a{
+                i{
+                    font-size: 1.2rem;
+                    line-height: .5;
+                }
+                &.print{
+                    color:$color-green;
+                }
+                &.pdf{
+                    color:$color-secondary;
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width:1280px){
+    .container-fluid{
+      max-width:1140px;
+    }
+  }
+  @media screen and (min-width:1366px){
+    .openSpace-title{
+      margin-bottom: 2.5rem;
+      h3{
+        font-size:2.5rem;
+      }
+    }
+    .container-fluid{
+      max-width:1280px;
+    }
+  }
+  @media screen and (min-width:1440px){
+    .container-fluid{
+      max-width:1366px;
+    }
+  }
+  @media screen and (min-width:1540px){
+    .container-fluid{
+      max-width:1440px;
+    }
+  }

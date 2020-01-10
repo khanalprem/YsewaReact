@@ -1,0 +1,630 @@
+.program-list {
+    margin-top: 3rem;
+}
+
+.ysewa-table {
+    width: 100% !important;
+    margin-top: 1rem;
+    border: 1px solid $color-bg;
+
+
+    thead {
+        background-color: $color-bg;
+
+        th {
+            color: $color-blue;
+            text-transform: uppercase;
+            font-family: $montserrat;
+            font-size: .775rem;
+            font-weight: 500;
+            padding: 1rem .6125rem;
+        }
+    }
+
+    tbody {
+        tr {
+            border-bottom: 1px solid $color-border;
+            @include animate_all(all .5s);
+
+            td {
+                font-weight: 500;
+                font-family: $montserrat;
+                padding: 1rem .6125rem;
+                font-size: .875rem;
+
+                span.budget {
+                    color: $color-secondary;
+                    font-weight: 500;
+                }
+
+                strong {
+                    font-size: 1rem;
+                    font-weight: 600;
+                    font-family: $montserrat;
+                }
+
+                .location {
+                    strong {
+                        display: block;
+                        font-size: .875rem;
+                        line-height: 1;
+                        text-transform: uppercase;
+                    }
+
+                    time {
+                        font-size: .775rem;
+                        color: $blue-light;
+                    }
+                }
+
+                .price {
+                    strong {
+                        font-size: .875rem;
+                        line-height: 1;
+                    }
+
+                    span {
+                        font-size: .775rem;
+                        color: $blue-light;
+                    }
+                }
+
+                .org-list {
+                    @include flexStart;
+
+                    a {
+                        max-width: 30px;
+                        margin-left: -10px;
+                        width: 30px;
+                        height: 30px;
+                        @include radius(50%);
+
+                        img {
+                            width: 30px;
+                            height: 30px;
+                            @include radius(50%);
+                            @include animate_all(all .5s);
+                            @include transform_scale(scale(1));
+                        }
+
+                        &:hover {
+                            img {
+                                @include transform_scale(scale(1.2));
+                            }
+                        }
+                    }
+                }
+
+                .partner-info,
+                .businfo-td {
+                    align-items: center;
+                    flex-wrap: nowrap;
+
+                    img {
+                        width: 30px;
+                        height: 30px;
+                        @include radius(50%);
+                        margin-right: 1rem;
+                    }
+
+
+                    h6 {
+                        font-size: .875rem;
+                        font-weight: 600;
+                        text-overflow: ellipsis;
+
+                        /* Needed to make it work */
+                        overflow: hidden;
+                        white-space: nowrap;
+
+                        span {
+                            font-size: .775rem;
+                            color: $blue-light;
+                            display: block;
+                            clear: both;
+                            font-weight: 500;
+                            margin-top: 0.15rem;
+                        }
+                    }
+
+                }
+
+                .businfo-td {
+                    h6 {
+                        text-transform: uppercase;
+                    }
+                }
+
+                a {
+                    &.name {
+                        color: $blue-light;
+                        font-size: 1rem;
+                        font-family: $raleway;
+                        text-transform: capitalize;
+                        font-weight: 600;
+
+                    }
+
+                    &.edit {
+                        color: $color-secondary;
+                        align-items: center;
+
+                        i {
+                            margin-right: .6125rem;
+                            font-size: 1rem;
+                        }
+                    }
+                }
+            }
+
+            &:hover {
+                @include boxshadow($boxshadow:0 17px 16px rgba($color-primary, 0.16));
+            }
+        }
+    }
+
+    .table-action {
+        position: relative;
+        display: inline-block;
+
+        a {
+            i {
+                color: $color-bg-text;
+            }
+        }
+
+        ul {
+            position: absolute;
+            top: 0%;
+            right: 0;
+            min-width: 150px;
+            display: none;
+            @include boxshadow($boxshadow:0 3px 10px rgba(0, 0, 0, 0.16));
+            z-index: 999;
+            background-color: $color-white;
+
+            li {
+                a {
+                    display: block;
+                    padding: 0.5rem 1rem;
+                    font-size: .775rem;
+                    color: $color-bg-text;
+                    align-items: center;
+                    text-transform: capitalize;
+                    border-bottom: 1px solid $color-border;
+
+                    i {
+                        font-size: 1rem;
+                        margin-right: 0.5rem;
+                    }
+
+                    &:hover {
+                        background-color: $color-secondary;
+                        color: $color-white;
+
+                    }
+                }
+
+                &:last-child {
+                    border-bottom: 0;
+                }
+            }
+        }
+    }
+
+    &.counter-table {
+        thead {
+            th {
+                font-size: .775rem;
+            }
+        }
+
+        tbody {
+            tr {
+
+                td {
+                    .location{
+                        strong {
+                            font-weight: 400;
+                            font-size: .875rem;
+                            color: $blue-light;
+                            margin-bottom: 0.15rem;
+                            text-transform: capitalize;
+                        }
+
+                        time{
+                            display: block;
+                            font-size: .875rem;
+                            font-weight: 600;
+                            color: $color-secondary;
+                        }
+                    }
+                    .driver-info{
+                        @extend .location;
+                        strong{
+                            font-size:.875rem;
+                            font-weight: 500;
+                        }
+                        span{
+                            color:$color-primary;
+                            font-size:.875rem;
+                        }
+                    }
+
+                    .price {
+                        strong {
+                            font-size: .875rem;
+                            line-height: 1;
+
+                        }
+
+                        span {
+                            font-size: .775rem;
+                            color: $blue-light;
+                        }
+                    }
+
+
+                    .businfo-td {
+                        align-items: center;
+                        flex-wrap: nowrap;
+
+                        img {
+                            width: 30px;
+                            height: 30px;
+                            @include radius(50%);
+                            margin-right: 1rem;
+                        }
+
+
+                        h6 {
+                            font-size: .875rem;
+                            font-weight: 600;
+                            text-overflow: ellipsis;
+                            text-transform: uppercase;
+                            margin: 0;
+                            /* Needed to make it work */
+                            overflow: hidden;
+                            white-space: nowrap;
+                            color: $color-secondary;
+
+                            span {
+
+                                font-size: .775rem;
+                                color: $blue-light;
+                                display: block;
+                                clear: both;
+                                font-weight: 500;
+                                margin-bottom: 0.15rem;
+                            }
+                        }
+
+                    }
+
+                    a {
+                        &.name {
+                            color: $blue-light;
+                            font-size: 1rem;
+                            font-family: $raleway;
+                            text-transform: capitalize;
+                            font-weight: 600;
+
+                        }
+
+                        &.edit {
+                            color: $color-secondary;
+                            align-items: center;
+
+                            i {
+                                margin-right: .6125rem;
+                                font-size: 1rem;
+                            }
+                        }
+                    }
+
+                    .action {
+                        a {
+                            color: $blue-light;
+                            font-size: 1rem;
+
+                            i {
+                                font-size: 1rem;
+                            }
+
+                            &.edit {
+                                &:hover {
+                                    color: $color-green;
+                                }
+                            }
+
+                            &.delete {
+                                &:hover {
+                                    color: $color-secondary;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &:hover {
+                    @include boxshadow($boxshadow:0 17px 16px rgba($color-primary, 0.16));
+                }
+            }
+        }
+
+        
+        
+    }
+    &.border-table{
+        thead{
+            th{
+                border:1px solid darken($color-border,10%);
+                align-items: center;
+            }
+        }
+        tbody{
+            td{
+                border:1px solid darken($color-border,5%);
+                .form-group{
+                    margin:0;
+                }
+            }
+        }
+    }
+    &.chalani-table{
+        tbody{
+            tr{
+                td{
+                    span{
+                        text-transform: capitalize;
+                        &.seat{
+                            margin-right: .25rem;
+                        }
+                        &.ticket-id,&.price{
+                            font-family: $montserrat;
+                        }
+                        &.status{
+                            padding:0;
+                            background-color: transparent;
+                            text-transform: uppercase;
+                            min-width: auto;
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+    
+}
+.table-seat-card {
+    box-shadow: none;
+
+    .card-header {
+        background-color: $secondary-light;
+
+        h5 {
+            font-size: .775rem;
+        }
+    }
+
+    .card-body {
+        background-color: $secondary-light;
+
+        form {
+            @include flex;
+            flex-wrap: wrap;
+
+            .form-group {
+
+                flex: 0 0 50%;
+                max-width: 50%;
+                margin-bottom: .6125rem;
+                padding: 0 .25rem;
+
+                label {
+                    margin-bottom: .25rem;
+                    font-size: .775rem;
+                }
+
+                input {
+                    height: 32px;
+                    font-size: .775rem;
+                    background-color: $color-white;
+
+                    @include input-placeholder {
+                        font-size: .775rem;
+                    }
+                }
+            }
+        }
+
+        ul {
+            &.seat-symbol-list {
+                align-items: center;
+                flex-wrap: wrap;
+
+                li {
+                    @include flexStart;
+                    align-items: center;
+                    -ms-flex: 0 0 47%;
+                    flex: 0 0 47%;
+                    max-width: 47%;
+                    margin-bottom: .5rem;
+
+                    .seat-symbol {
+                        width: 20px;
+                        height: 20px;
+                        margin-right: .5rem;
+                        line-height: 1rem;
+                        padding: 4px 0;
+                        position: relative;
+                        @include radius(5px);
+                        font-size: .775rem;
+                        text-align: center;
+
+                        &::before {
+                            color:$color-white;
+                            position: absolute;
+                            width: 75%;
+                            height: 75%;
+                            top: 1px;
+                            left: 50%;
+                            transform: translate(-50%, 0%);
+                            @include radius(3px);
+                        }
+
+                        &.available {
+                            background-color: $color-grey;
+
+                            &::before {
+                                content: "A";
+                                color:$color-secondary; 
+                                background: rgba($color-white, 0.4);
+                            }
+
+                        }
+
+                        &.booked {
+                            background-color: $color-green;
+
+                            &::before {
+                                content: "B";
+                                background: rgba($color-white, 0.4);
+                            }
+
+                        }
+                        &.preserved {
+                            background-color: $color-blue;
+
+                            &::before {
+                                content: "P";
+                                background: rgba($color-white, 0.4);
+                            }
+
+                        }
+                        &.cancel {
+                            background-color: $color-secondary;
+
+                            &::before {
+                                content: "C";
+                                background: rgba($color-white, 0.4);
+                            }
+
+                        }
+                    }
+
+                    .seat-info {
+                        p {
+                            font-size: .775rem;
+                            margin: 0 0 .15rem 0;
+                            text-transform:capitalize;
+
+                        }
+
+                        h6 {
+                            font-size: .875rem;
+                            margin: 0;
+                            color: $color-blue;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .card-footer {
+        background-color: $secondary-light;
+
+        .buttons {
+            .ysewa-button {
+                padding: 0.25rem .5rem;
+                font-size: .775rem;
+                min-width: 80px;
+            }
+        }
+    }
+    &.manage-price{
+        .card-header{
+            padding: .25rem .6125rem;
+        }
+    }
+}
+
+.dataTables_paginate {
+    margin-top: 2rem;
+}
+
+.dataTables_filter {
+    label {
+        input.form-control {
+            border: 1px solid darken($color-bg, 5%);
+            color: $color-bg-text;
+            font-size: .875rem;
+            font-family: $montserrat;
+            -webkit-outline: none;
+            outline: none;
+
+            &:focus {
+                -webkit-outline: none;
+                outline: none;
+                box-shadow: none;
+                background-color: $color-focus;
+            }
+        }
+    }
+}
+
+.project_list {
+    padding: 30px;
+    background-color: $color-light;
+    margin-bottom: 30px;
+
+    .table {
+
+        th,
+        td {
+            border: 1px solid rgba($color-primary, 0.1);
+            font-size: 0.875rem;
+        }
+
+        th {
+            border-bottom: 2px solid rgba($color-secondary, 0.2);
+            text-transform: capitalize;
+        }
+    }
+}
+
+.table-footer {
+    @include flexBetween;
+    align-items: center;
+}
+
+ul.pagination {
+    justify-content: flex-end;
+    align-items: center;
+
+    li {
+        margin-right: .5rem;
+
+        a.page-link {
+            color: $color-primary;
+            background-color: $color-bg;
+            border: 1px solid rgba($color-primary, 0.1);
+            @include radius(4px);
+
+            &:focus {
+                outline: none;
+            }
+        }
+
+        &.active,
+        &:hover {
+            a.page-link {
+                background-color: $color-secondary;
+                color: $color-white;
+                border-color: $color-secondary;
+            }
+        }
+    }
+}

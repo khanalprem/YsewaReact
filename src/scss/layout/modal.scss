@@ -1,0 +1,175 @@
+.modal {
+    .modal-content {
+        .modal-header {
+            padding: .6125rem;
+            align-items: center;
+
+            h4.modal-title {
+                font-size: .775rem;
+                margin: 0;
+                text-transform: uppercase;
+                color: $color-blue;
+                font-weight: 600;
+                ;
+            }
+
+            .close {
+                position: absolute;
+                right: -1rem;
+                top: -.5rem;
+                width: 28px;
+                height: 28px;
+                @include radius(50%);
+                @include flexvr;
+                color: $color-white;
+                background-color: $color-secondary;
+                @include boxshadow($boxshadow:0 4px 10px 0 rgba($color-secondary, .5));
+                font-weight: 300;
+                padding: 0;
+                margin: 0;
+                opacity: 1;
+            }
+            .ysewa-button{
+                &.sm-button{
+                    padding:.25rem 1rem;
+                    font-size: .775rem;
+                    min-width: 5rem;
+                }
+            }
+            &.ticket-header{
+                margin:0;
+                padding:0;
+                border:0;
+            }
+        }
+
+        .modal-body {
+            .ysewa-table {
+                tbody {
+                    tr {
+                        td {
+                            .form-group {
+                                margin: 0;
+
+                                label {
+                                    margin-bottom: .5rem;
+                                    font-size: .775rem;
+                                }
+
+                                .form-control {
+                                    border: 0;
+                                    height: 34px;
+                                    line-height: 34px;
+                                    border-radius: 0;
+                                    border: 1px solid $color-border;
+                                    @include radius(4px);
+                                    font-size: .775rem;
+
+                                    @include input-placeholder {
+                                        color: $color-bg-text;
+                                        font-size: .775rem;
+                                        text-transform: capitalize;
+                                    }
+                                }
+
+                                .input-group-append,
+                                .input-group-prepend {
+                                    .input-group-text {
+                                        border: 0;
+                                        background-color: $color-border;
+                                        position: relative;
+
+                                        &::after {
+                                            content: '';
+                                            width: 1px;
+                                            background-color: $color-border;
+                                            height: 30px;
+                                            @include translatey;
+                                            z-index: 99;
+                                        }
+                                    }
+
+                                    i {
+                                        font-family: 'Material Icons'
+                                    }
+                                }
+
+                                .input-group-append {
+                                    .input-group-text {
+                                        padding: .25rem .6125rem;
+
+                                        &::after {
+                                            left: 0;
+                                        }
+
+                                        i {
+                                            font-size: .875rem;
+                                            color: $blue-light;
+                                        }
+                                    }
+
+
+
+
+                                }
+
+                                .input-group-prepend {
+                                    .input-group-text {
+                                        &::after {
+                                            right: 0;
+                                        }
+                                    }
+                                }
+
+                                .select2,.select2-container--default {
+                                        .select2-selection--single {
+                                            border: 0;
+                                            height: 34px;
+                                            line-height: 34px;
+                                            border-radius: 0;
+                                            border: 1px solid $color-border;
+                                            @include radius(4px);
+                                            font-size: .775rem;
+                                            .select2-selection__rendered{
+                                                line-height: 34px;
+                                            }
+                                            .select2-selection__arrow{
+                                                height: 34px;
+                                            }
+                                        }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            
+        }
+
+        .modal-footer {
+            padding: .6125rem;
+            align-items: center;
+            &.ticket-footer{
+                justify-content:space-between;
+                .print-icons {
+                    a {
+                        &.print {
+                            i {
+                                color: $color-green;
+                                font-size: 1rem;
+                            }
+                        }
+        
+                        &.pdf {
+                            i {
+                                color: $color-secondary;
+                                font-size: 1rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}

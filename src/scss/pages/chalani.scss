@@ -1,0 +1,83 @@
+.chalani-header {
+    .chalani-title {
+        text-transform: uppercase;
+        text-align: center;
+        font-weight: 700;
+        font-size: 1.5rem;
+        font-family: $montserrat;
+        margin-bottom: 2rem;
+        color: $color-secondary
+    }
+
+    .chalani-info {
+        background-color: $secondary-light;
+        padding: 1rem 0;
+
+        li {
+            @include flexStart;
+            font-size: .875rem;
+            padding: .15rem 1rem;
+            text-transform: capitalize;
+
+            span {
+                flex: 0 0 25%;
+                max-width: 25%;
+            }
+
+            b {
+                font-weight: 500;
+                font-family: $montserrat;
+
+                small {
+                    font-size: .875rem;
+                    margin-right: .25rem;
+                }
+
+                &.bus-number {
+                    color: $color-secondary;
+                }
+            }
+        }
+    }
+
+    .passenger-chalan {
+        @include flexvr;
+        min-height: 134px;
+        padding: 1rem;
+
+        h3 {
+            font-size: .9rem;
+            text-transform: uppercase;
+        }
+
+        .print-icons {
+            a {
+                &.print {
+                    i {
+                        color: $color-green;
+                    }
+                }
+
+                &.pdf {
+                    i {
+                        color: $color-secondary;
+                    }
+                }
+            }
+        }
+    }
+}
+.chalani-footer{
+    align-items: center;
+    .signature{
+        span{
+            color:$color-bg-text;
+            font-size:.775rem;
+        }
+        h6{
+            margin:.15rem 0 0 0;
+            text-transform: uppercase;
+            font-size:.845rem;
+        }
+    }
+}

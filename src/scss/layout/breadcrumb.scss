@@ -1,0 +1,226 @@
+.ysewa-breadcrumb {
+    background-color: $secondary-light;
+    padding: .6125rem 0;
+
+    ul {
+        align-items: center;
+        @include flexStart;
+
+        li {
+            text-transform: capitalize;
+            font-family: $montserrat;
+            font-weight: 500;
+            font-size: 1rem;
+            letter-spacing: 1px;
+            color: $color-secondary;
+
+            a {
+                @include flexStart;
+                align-items: center;
+
+                i {
+                    color: $color-secondary;
+                    margin-right: 1rem;
+                }
+
+                &::after {
+                    @include animate_all(all .5s);
+                    content: 'chevron_right';
+                    font-size: 1.4rem;
+                    font-family: 'Material Icons';
+                    margin: 0 .6125rem;
+                    text-transform: initial;
+                }
+
+                &.sm-button {
+                    padding: 0.15rem .5rem;
+                    text-align: center;
+                    min-width: auto;
+
+                    i {
+                        margin-right: .25rem;
+                    }
+
+                    &::after {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+    
+}
+.filter-form {
+    padding:1rem 0;
+    form {
+        
+        .form-group {
+            margin:0;
+            label{
+                font-size: .875rem;
+            }
+            .form-control {
+                border: 0;
+                height: 40px;
+                line-height: 40px;
+                border-radius: 0;
+                border:1px solid $color-border;
+                @include radius(4px);
+                @include input-placeholder {
+                    color: $color-bg-text;
+                    font-size: .875rem;
+                    text-transform: capitalize;
+                }
+            }
+            button.ysewa-button{
+                height: 40px;
+                @include flexCenter;
+                flex-direction: column;
+                background-color:$color-white;
+            }
+
+            .input-group-append,
+            .input-group-prepend {
+                .input-group-text {
+                    border: 0;
+                    background-color: $color-border;
+                    position: relative;
+                    &::after{
+                        content:'';
+                        width:1px;
+                        background-color: $color-border;
+                        height:30px;
+                        @include translatey;
+                        z-index: 99;
+                    }
+                }
+
+                i {
+                    font-family: 'Material Icons';
+                    color:$color-secondary;
+                }
+            }
+            .input-group-append{
+                .input-group-text {
+                    &::after{
+                        left:0;
+                    }
+                }
+            }
+            .input-group-prepend{
+                .input-group-text {
+                    &::after{
+                        right:0;
+                    }
+                }
+            }
+        }
+    }
+    &.dashboard-filter{
+        padding:0;
+        border-bottom: 1px solid $color-border;
+        padding-bottom: .6125rem;
+        form{
+            .form-group{
+                label{
+                    margin-bottom: .5rem;
+                    font-size: .775rem;
+                }
+                .form-control{
+                    border: 0;
+                    border-radius: 0;
+                    border:1px solid $color-border;
+                    @include radius(4px);
+                    @include input-placeholder {
+                        color: $color-bg-text;
+                        font-size: .775rem;
+                        text-transform: capitalize;
+                    } 
+                }
+            }
+            .input-group-append{
+                .input-group-text {
+                    padding:.25rem .6125rem;
+                    i{
+                        font-size: .875rem;
+                    }
+                }
+            }
+        }
+    }
+    @media screen and(max-width:$mb-xl){
+        form{
+            .form-group{
+                margin-bottom: 1rem !important;
+            }
+        }
+    }
+}
+.search-form{
+    margin-top:-70px;
+    position: relative;
+    z-index: 10;
+    
+    .filter-form{
+        background-color: $color-white;
+        padding:10px;
+        @include radius(10px);
+        @include boxshadow(0 2px 6px rgba($color-primary,.16));
+        form{
+            .input-group-append{
+                .input-group-text {
+                    i{
+                        color:$color-secondary;
+                    }
+                }
+            }
+        }
+    }
+}
+.passenger-add{
+    form{
+        .form-group{
+            margin-bottom: 1rem;
+            label{
+                margin-bottom: .5rem;
+                font-size: .775rem;
+            }
+            .form-control{
+                border: 0;
+                height: 34px;
+                line-height: 34px;
+                border-radius: 0;
+                border:1px solid $color-border;
+                @include radius(4px);
+                @include input-placeholder {
+                    color: $color-bg-text;
+                    font-size: .775rem;
+                    text-transform: capitalize;
+                } 
+            }
+        }
+        .input-group-append{
+            .input-group-text {
+                padding:.25rem .6125rem;
+                i{
+                    font-size: .875rem;
+                    color:$blue-light;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width:992px){
+    .search-form{
+        margin-top:-140px;
+        
+        .filter-form{
+            form{
+                .form-group{
+                    margin-top:.6125rem;
+                }
+            }
+        }
+    }
+}
